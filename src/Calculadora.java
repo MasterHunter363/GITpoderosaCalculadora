@@ -38,7 +38,8 @@ public class Calculadora extends javax.swing.JFrame {
         jbVezes = new javax.swing.JButton();
         jbDividir = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Calculadora");
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -179,6 +180,7 @@ public class Calculadora extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txfResultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txfResultadoActionPerformed
