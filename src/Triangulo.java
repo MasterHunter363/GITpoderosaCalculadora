@@ -34,6 +34,7 @@ public class Triangulo extends javax.swing.JFrame {
         txfLado2 = new javax.swing.JTextField();
         txfLado3 = new javax.swing.JTextField();
         jbVerificar = new javax.swing.JButton();
+        txfResultado = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -67,6 +68,15 @@ public class Triangulo extends javax.swing.JFrame {
         jbVerificar.setBackground(new java.awt.Color(153, 153, 153));
         jbVerificar.setForeground(new java.awt.Color(0, 0, 0));
         jbVerificar.setText("Verificar Forma");
+        jbVerificar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbVerificarActionPerformed(evt);
+            }
+        });
+
+        txfResultado.setEditable(false);
+        txfResultado.setBackground(new java.awt.Color(204, 204, 204));
+        txfResultado.setForeground(new java.awt.Color(0, 0, 0));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -87,7 +97,9 @@ public class Triangulo extends javax.swing.JFrame {
                             .addComponent(txfLado1, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE)
                             .addComponent(txfLado2)
                             .addComponent(txfLado3))))
-                .addContainerGap(181, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
+                .addComponent(txfResultado, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(29, 29, 29))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -104,7 +116,8 @@ public class Triangulo extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(txfLado3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txfLado3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txfResultado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 26, Short.MAX_VALUE)
                 .addComponent(jbVerificar)
                 .addGap(19, 19, 19))
@@ -133,6 +146,17 @@ public class Triangulo extends javax.swing.JFrame {
     private void txfLado1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txfLado1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txfLado1ActionPerformed
+
+    private void jbVerificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbVerificarActionPerformed
+        String numeroStr1 = txfLado1.getText();
+        String numeroStr2 = txfLado2.getText();
+        String numeroStr3 = txfLado3.getText();
+        
+        double equilatero = 3;
+        double isosceles = 2;
+        //double escaleno = 3;
+        
+    }//GEN-LAST:event_jbVerificarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -180,5 +204,6 @@ public class Triangulo extends javax.swing.JFrame {
     private javax.swing.JTextField txfLado1;
     private javax.swing.JTextField txfLado2;
     private javax.swing.JTextField txfLado3;
+    private javax.swing.JTextField txfResultado;
     // End of variables declaration//GEN-END:variables
 }
