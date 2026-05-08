@@ -1,3 +1,7 @@
+
+import java.lang.reflect.AccessFlag;
+import javax.swing.JOptionPane;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
@@ -47,6 +51,11 @@ public class ComboBoxPesoUniverso extends javax.swing.JFrame {
         });
 
         jcbPlanetas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Mercúrio", "Vênus", "Terra", "Marte", "Júpiter", "Saturno", "Urano", "Netuno", "Lua" }));
+        jcbPlanetas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcbPlanetasActionPerformed(evt);
+            }
+        });
 
         jbPesoTotal.setText("Calcular Peso");
         jbPesoTotal.addActionListener(new java.awt.event.ActionListener() {
@@ -118,11 +127,63 @@ public class ComboBoxPesoUniverso extends javax.swing.JFrame {
 
     private void jbPesoTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbPesoTotalActionPerformed
                 
-        String Planeta = String.valueOf(txfPeso.getText());
-        
-        jbPesoTotal.setText(String.valueOf(evt));
-        
+         ;
+         double gravidade = 1;
+         double resultado;
+         
+        double peso = Double.parseDouble(txfPeso.getText());
+         
+         String Planeta = jcbPlanetas.getSelectedItem().toString();
+         
+         switch(Planeta){
+             case "Mercurio":
+                 gravidade = 3.6;
+                 break;
+             
+             case "Venus":
+                 gravidade = 8.7;
+                 break;
+             
+             case "Terra":
+                 gravidade = 9.8;
+                 break;
+             
+             case "Marte":
+                 gravidade = 3.7;
+                 break;
+             
+             case "Jupiter":
+                 gravidade = 24.79;
+                 break;
+             
+             case "Saturno":
+                 gravidade = 10.44;
+                 break;
+             
+             case "Urano":
+                 gravidade = 8.69;
+                 break;
+             
+             case "Netuno":
+                 gravidade = 11.15;
+                 break;
+             
+             case "lua":
+                 gravidade = 1.6;
+                 break;
+             
+         }
+         
+         resultado = (peso /10) * gravidade;
+         
+         //txfPeso.setText(String.valueOf(resultado));
+         JOptionPane.showMessageDialog(null, resultado);
     }//GEN-LAST:event_jbPesoTotalActionPerformed
+
+    private void jcbPlanetasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbPlanetasActionPerformed
+
+       
+    }//GEN-LAST:event_jcbPlanetasActionPerformed
 
     /**
      * @param args the command line arguments

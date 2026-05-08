@@ -61,6 +61,12 @@ public class Calculadora extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Resultado:");
 
+        txfNumero1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txfNumero1ActionPerformed(evt);
+            }
+        });
+
         txfResultado.setEditable(false);
         txfResultado.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -236,6 +242,10 @@ public class Calculadora extends javax.swing.JFrame {
         
         txfResultado.setText(String.valueOf(total));
     }//GEN-LAST:event_jbVezesActionPerformed
+
+    private void txfNumero1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txfNumero1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txfNumero1ActionPerformed
 
     /**
      * @param args the command line arguments

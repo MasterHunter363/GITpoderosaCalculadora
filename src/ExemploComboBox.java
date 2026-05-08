@@ -56,6 +56,11 @@ public class ExemploComboBox extends javax.swing.JFrame {
         });
 
         txfProdutoSeleionado.setEditable(false);
+        txfProdutoSeleionado.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txfProdutoSeleionadoActionPerformed(evt);
+            }
+        });
 
         jbSalvar.setText("Salvar");
         jbSalvar.addActionListener(new java.awt.event.ActionListener() {
@@ -161,6 +166,10 @@ public class ExemploComboBox extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null,"Produto excluido com sucesso!");
         
     }//GEN-LAST:event_jbExcluirActionPerformed
+
+    private void txfProdutoSeleionadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txfProdutoSeleionadoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txfProdutoSeleionadoActionPerformed
 
     /**
      * @param args the command line arguments
