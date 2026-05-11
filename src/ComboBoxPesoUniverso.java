@@ -136,11 +136,11 @@ public class ComboBoxPesoUniverso extends javax.swing.JFrame {
          String Planeta = jcbPlanetas.getSelectedItem().toString();
          
          switch(Planeta){
-             case "Mercurio":
+             case "Mercúrio":
                  gravidade = 3.6;
                  break;
              
-             case "Venus":
+             case "Vênus":
                  gravidade = 8.7;
                  break;
              
@@ -152,7 +152,7 @@ public class ComboBoxPesoUniverso extends javax.swing.JFrame {
                  gravidade = 3.7;
                  break;
              
-             case "Jupiter":
+             case "Júpiter":
                  gravidade = 24.79;
                  break;
              
@@ -168,7 +168,7 @@ public class ComboBoxPesoUniverso extends javax.swing.JFrame {
                  gravidade = 11.15;
                  break;
              
-             case "lua":
+             case "Lua":
                  gravidade = 1.6;
                  break;
              
@@ -176,8 +176,8 @@ public class ComboBoxPesoUniverso extends javax.swing.JFrame {
          
          resultado = (peso /10) * gravidade;
          
-         //txfPeso.setText(String.valueOf(resultado));
-         JOptionPane.showMessageDialog(null, resultado);
+        
+         JOptionPane.showMessageDialog(null,"O seu peso em " + Planeta+ " e " +resultado+ " kg");
     }//GEN-LAST:event_jbPesoTotalActionPerformed
 
     private void jcbPlanetasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcbPlanetasActionPerformed
