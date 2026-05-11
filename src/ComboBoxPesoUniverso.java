@@ -128,7 +128,7 @@ public class ComboBoxPesoUniverso extends javax.swing.JFrame {
     private void jbPesoTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbPesoTotalActionPerformed
                 
          ;
-         double gravidade = 1;
+         double gravidade = 0;
          double resultado;
          
         double peso = Double.parseDouble(txfPeso.getText());
