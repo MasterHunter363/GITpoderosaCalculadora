@@ -36,7 +36,7 @@ public class Triangulo extends javax.swing.JFrame {
         jbVerificar = new javax.swing.JButton();
         txfResultado = new javax.swing.JTextField();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(204, 204, 204));
 
@@ -141,6 +141,7 @@ public class Triangulo extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txfLado1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txfLado1ActionPerformed
@@ -148,13 +149,26 @@ public class Triangulo extends javax.swing.JFrame {
     }//GEN-LAST:event_txfLado1ActionPerformed
 
     private void jbVerificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbVerificarActionPerformed
-        String numeroStr1 = txfLado1.getText();
-        String numeroStr2 = txfLado2.getText();
-        String numeroStr3 = txfLado3.getText();
         
-        double equilatero = 3;
-        double isosceles = 2;
-        //double escaleno = 3;
+        double lado1;
+        double lado2;
+        double lado3;
+        
+        lado1 = Double.parseDouble(txfLado1.getText());
+        lado2 = Double.parseDouble(txfLado2.getText());
+        lado3 = Double.parseDouble(txfLado3.getText());
+        
+        if (lado1 == lado2 && lado2 == lado3){
+            
+            txfResultado.setText("Equilátero");
+        
+        }if (lado1 == lado2 || lado1 == lado3 || lado2 == lado3){
+            
+            txfResultado.setText("Isósceles");
+            
+        }else{
+            txfResultado.setText("Escaleno");
+        }
         
     }//GEN-LAST:event_jbVerificarActionPerformed
 
@@ -189,7 +203,7 @@ public class Triangulo extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Triangulo().setVisible(true);
+                
             }
         });
     }
