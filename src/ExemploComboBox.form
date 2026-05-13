@@ -154,6 +154,9 @@
           </Events>
         </Component>
         <Component class="javax.swing.JTextField" name="txfNovoProduto">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txfNovoProdutoActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jbSalvar">
           <Properties>

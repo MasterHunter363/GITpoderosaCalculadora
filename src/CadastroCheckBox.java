@@ -1,5 +1,6 @@
 
 import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
 
 
 public class CadastroCheckBox extends javax.swing.JFrame {
@@ -12,8 +13,7 @@ public class CadastroCheckBox extends javax.swing.JFrame {
 
     public void dimensionar(){
         ImageIcon icon = new ImageIcon("src/img/onePiece.png");
-        icon.setImage(icon.getImage().getScaledInstance(jlOnePiece.getWidth(), jlOnePiece.getHeight(), 1));
-        jlOnePiece.setIcon(icon);
+        ;
 }
     
     
@@ -22,6 +22,7 @@ public class CadastroCheckBox extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        bgTurno = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -33,13 +34,18 @@ public class CadastroCheckBox extends javax.swing.JFrame {
         ckbValeTransporte = new javax.swing.JCheckBox();
         ckbHomeOffice = new javax.swing.JCheckBox();
         jPanel3 = new javax.swing.JPanel();
+        rbManha = new javax.swing.JRadioButton();
+        rbTarde = new javax.swing.JRadioButton();
+        rbNoite = new javax.swing.JRadioButton();
         jPanel4 = new javax.swing.JPanel();
-        jlOnePiece = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jsNivelXP = new javax.swing.JSlider();
+        jbSalva = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Cadastro de Fucionário");
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Cadastro de Funcionário", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Bookman Old Style", 0, 18))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "        Cadastro de Funcionário", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Bookman Old Style", 0, 18))); // NOI18N
         jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         jLabel1.setText("Nome de Fucionário");
@@ -94,7 +100,7 @@ public class CadastroCheckBox extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(ckbValeAlimentacao)
                     .addComponent(ckbPlanoDeSaude))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 115, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(ckbValeTransporte)
                     .addComponent(ckbHomeOffice))
@@ -116,31 +122,78 @@ public class CadastroCheckBox extends javax.swing.JFrame {
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Turno de Trabalho", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Bookman Old Style", 0, 14))); // NOI18N
 
+        bgTurno.add(rbManha);
+        rbManha.setText("Manhã");
+
+        bgTurno.add(rbTarde);
+        rbTarde.setText("Tarde");
+
+        bgTurno.add(rbNoite);
+        rbNoite.setText("Noite");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 186, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(rbManha)
+                    .addComponent(rbTarde)
+                    .addComponent(rbNoite))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 195, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(rbManha)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbTarde)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(rbNoite)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("Nível dde "));
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "        Nível de Experiência", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Bookman Old Style", 0, 14))); // NOI18N
+
+        jLabel3.setText("Experiêcia:");
+
+        jsNivelXP.setMajorTickSpacing(2);
+        jsNivelXP.setMaximum(10);
+        jsNivelXP.setPaintLabels(true);
+        jsNivelXP.setPaintTicks(true);
+        jsNivelXP.setSnapToTicks(true);
+        jsNivelXP.setValue(0);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jsNivelXP, javax.swing.GroupLayout.DEFAULT_SIZE, 218, Short.MAX_VALUE))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(80, 80, 80)
+                .addComponent(jLabel3)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGap(35, 35, 35)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jsNivelXP, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(37, Short.MAX_VALUE))
         );
 
-        jlOnePiece.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/onePiece.png"))); // NOI18N
+        jbSalva.setText("Salva Cadastro");
+        jbSalva.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbSalvaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -151,14 +204,14 @@ public class CadastroCheckBox extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addGap(82, 82, 82)
-                .addComponent(jlOnePiece, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jbSalva, javax.swing.GroupLayout.PREFERRED_SIZE, 175, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -172,14 +225,49 @@ public class CadastroCheckBox extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jlOnePiece, javax.swing.GroupLayout.PREFERRED_SIZE, 271, Short.MAX_VALUE)
-                .addContainerGap())
+                .addGap(18, 20, Short.MAX_VALUE)
+                .addComponent(jbSalva)
+                .addContainerGap(25, Short.MAX_VALUE))
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jbSalvaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSalvaActionPerformed
+        
+        String horario = "";
+        
+        if(rbManha.isSelected()){
+            
+            horario = "Manhã";
+            
+        } if (rbTarde.isSelected()){
+            
+            horario = " Tarde";
+            
+        }if (rbNoite.isSelected()){
+            
+            horario = " Noite";
+            
+        }
+        
+        String beneficios = "";
+        
+       
+        beneficios += txfNomeFucionario.getText() + "\n";
+        beneficios += " Vale Alimentação: " + ckbValeAlimentacao.isSelected() + "\n";
+        beneficios += " Plano de Saúde: " + ckbPlanoDeSaude.isSelected() + "\n";
+        beneficios += " Vale Transporte: " + ckbValeTransporte.isSelected() + "\n";
+        beneficios += " Home Office: " + ckbHomeOffice.isSelected() + "\n";
+        
+        beneficios += " Turno de Trabalho: " + horario + "\n";
+        beneficios += " Nivel de Experiência:  " + jsNivelXP.getValue() + ".";
+        
+        JOptionPane.showMessageDialog(null, beneficios);
+        
+        
+    }//GEN-LAST:event_jbSalvaActionPerformed
 
 
     public static void main(String args[]) {
@@ -215,18 +303,24 @@ public class CadastroCheckBox extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup bgTurno;
     private javax.swing.JCheckBox ckbHomeOffice;
     private javax.swing.JCheckBox ckbPlanoDeSaude;
     private javax.swing.JCheckBox ckbValeAlimentacao;
     private javax.swing.JCheckBox ckbValeTransporte;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JButton jbSalva;
     private javax.swing.JComboBox<String> jcbSetores;
-    private javax.swing.JLabel jlOnePiece;
+    private javax.swing.JSlider jsNivelXP;
+    private javax.swing.JRadioButton rbManha;
+    private javax.swing.JRadioButton rbNoite;
+    private javax.swing.JRadioButton rbTarde;
     private javax.swing.JTextField txfNomeFucionario;
     // End of variables declaration//GEN-END:variables
 }

@@ -51,6 +51,11 @@ public class ConfiguracaoJogo extends javax.swing.JFrame {
         ckbLegenda.setText("Ativa Legendas");
 
         ckbTelaCheia.setText("Modo Tela Cheia");
+        ckbTelaCheia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ckbTelaCheiaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -80,12 +85,27 @@ public class ConfiguracaoJogo extends javax.swing.JFrame {
 
         bgDificuldade.add(rbfacil);
         rbfacil.setText("Fácil");
+        rbfacil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbfacilActionPerformed(evt);
+            }
+        });
 
         bgDificuldade.add(rbmedio);
         rbmedio.setText("Médio");
+        rbmedio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbmedioActionPerformed(evt);
+            }
+        });
 
         bgDificuldade.add(rbdificil);
         rbdificil.setText("Dificil");
+        rbdificil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbdificilActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -208,6 +228,22 @@ public class ConfiguracaoJogo extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, mensagem);
         
     }//GEN-LAST:event_jbSalvaActionPerformed
+
+    private void rbmedioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbmedioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rbmedioActionPerformed
+
+    private void rbfacilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbfacilActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rbfacilActionPerformed
+
+    private void rbdificilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbdificilActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rbdificilActionPerformed
+
+    private void ckbTelaCheiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ckbTelaCheiaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ckbTelaCheiaActionPerformed
 
     /**
      * @param args the command line arguments
