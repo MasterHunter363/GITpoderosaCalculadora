@@ -1,5 +1,6 @@
 
 import java.util.Random;
+import javax.swing.JOptionPane;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -239,28 +240,80 @@ public class Jajanken extends javax.swing.JFrame {
 
     private void jbResultadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbResultadoActionPerformed
       
+        if (rbPedra.isSelected() == false &&
+                rbPapel.isSelected() == false &&
+                rbTesoura.isSelected() == false)
+        {
+            
+            JOptionPane.showMessageDialog(null,"!!ESCOLHA UMA DAS OPÇÕES!!");
+        return;
+            
+        }
+        
+        
+        
         Random r = new Random();
-        int computador = r.nextInt(3) + 1; 
-        int jogador;
+        int computador = r.nextInt(3); 
+        int jogador = 0;
+
+        String escolhajogador = "";
+        String escolhaPc = "";
+        String resultado = "";
         
         
-        
-        String jojoken = "";
        int pedra = 0;
        int papel = 1;
        int tesoura = 2;
        
-       
-       // Resultado de Vitória
-//        if (jogador == 1 && computador == 3
-//                || jogador == 2 && computador == 1
-//                || jogador == 3 && computador == 2) {
-//        }
+       // escolha do jogador
+       switch(jogador){
            
+           case 0:
+               escolhajogador = "pedra";
+               break;
+           case 1:
+               escolhajogador = "papel";
+               break;
+           case 2:
+               escolhajogador = "tesoura";
+               break;
+               
        
+       }
+       // escolha do bot 
        
+       switch(computador){
+           
+           case 0:
+               escolhaPc = "pedra";
+               break;
+           case 1:
+               escolhaPc = "papel";
+               break;
+           case 2:
+               escolhaPc = "tesoura";
+               break; 
+       }
+
        
-       
+        // Resultado de Empate
+        if (jogador == computador){  
+            
+            resultado = " Nenhuma abertura encontrada... empate! ";   
+        }else if (jogador == 0 && computador == 2 ||// Resultado de Vitória
+                jogador == 1 && computador == 0||
+                jogador == 2 && computador == 1){
+            
+            resultado = " Vitória! Você lutou como um verdadeiro Hunter! ";
+        }else {
+            //Resultado de Derrota
+            
+            resultado = " Derrota... talvez seja hora de treinar mais seu Nen. ";
+        }
+        JOptionPane.showMessageDialog(null, "Técnica do Hunter : " +
+                escolhajogador + " \nTécnica do Inimigo : " +
+                escolhaPc + " \n" + resultado);
+        
     }//GEN-LAST:event_jbResultadoActionPerformed
 
     /**
