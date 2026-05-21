@@ -26,7 +26,11 @@ public class MenuInicial extends javax.swing.JFrame {
     private void initComponents() {
 
         jMenu5 = new javax.swing.JMenu();
-        jButton1 = new javax.swing.JButton();
+        jbConfJogo = new javax.swing.JButton();
+        jbTriânguloFormas = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        jbJajanken = new javax.swing.JButton();
+        jbSuperCalculadora = new javax.swing.JButton();
         jMenuBar2 = new javax.swing.JMenuBar();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
@@ -41,10 +45,38 @@ public class MenuInicial extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu Inicial");
 
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jbConfJogo.setText("Configuração de Jogo");
+        jbConfJogo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jbConfJogoActionPerformed(evt);
+            }
+        });
+
+        jbTriânguloFormas.setText("Triângulo e suas Formas");
+        jbTriânguloFormas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbTriânguloFormasActionPerformed(evt);
+            }
+        });
+
+        jButton3.setText("Seu Peso em Diferentes Planetas ");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
+        jbJajanken.setText("Gamer Jokenpô");
+        jbJajanken.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbJajankenActionPerformed(evt);
+            }
+        });
+
+        jbSuperCalculadora.setText("SuperCalculadora");
+        jbSuperCalculadora.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbSuperCalculadoraActionPerformed(evt);
             }
         });
 
@@ -97,16 +129,31 @@ public class MenuInicial extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addComponent(jButton1)
-                .addContainerGap(420, Short.MAX_VALUE))
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jbSuperCalculadora)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jbTriânguloFormas)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jbConfJogo))
+                    .addComponent(jbJajanken))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(68, 68, 68)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(227, Short.MAX_VALUE))
+                .addGap(27, 27, 27)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jbSuperCalculadora, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbTriânguloFormas, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jbConfJogo, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jbJajanken, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(251, Short.MAX_VALUE))
         );
 
         pack();
@@ -137,11 +184,35 @@ public class MenuInicial extends javax.swing.JFrame {
         jogo.setVisible(true);
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jbConfJogoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbConfJogoActionPerformed
+        ConfiguracaoJogo jogo = new ConfiguracaoJogo();
+        
+        jogo.setVisible(true);
+    }//GEN-LAST:event_jbConfJogoActionPerformed
+
+    private void jbTriânguloFormasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbTriânguloFormasActionPerformed
         Triangulo t = new Triangulo();
         
         t.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jbTriânguloFormasActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        ComboBoxPesoUniverso p = new ComboBoxPesoUniverso();
+        
+        p.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jbJajankenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbJajankenActionPerformed
+        Jajanken po = new Jajanken();
+        
+        po.setVisible(true);
+    }//GEN-LAST:event_jbJajankenActionPerformed
+
+    private void jbSuperCalculadoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSuperCalculadoraActionPerformed
+        Calculadora c = new Calculadora();
+        
+        c.setVisible(true);
+    }//GEN-LAST:event_jbSuperCalculadoraActionPerformed
 
     /**
      * @param args the command line arguments
@@ -179,7 +250,7 @@ public class MenuInicial extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton3;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
@@ -189,5 +260,9 @@ public class MenuInicial extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JButton jbConfJogo;
+    private javax.swing.JButton jbJajanken;
+    private javax.swing.JButton jbSuperCalculadora;
+    private javax.swing.JButton jbTriânguloFormas;
     // End of variables declaration//GEN-END:variables
 }
